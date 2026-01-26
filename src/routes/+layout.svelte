@@ -7,7 +7,10 @@
 </script>
 
 <svelte:head>
+	<title>Luís Otávio</title>
 	<link rel="icon" href={favicon} />
+	<link rel="canonical" href="https://luisfadini.com/" />
+	<meta name="author" content="Luís Otávio" />
 </svelte:head>
 
 {@render children()}

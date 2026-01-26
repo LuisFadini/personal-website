@@ -24,6 +24,13 @@
 	const Component = $derived(content);
 </script>
 
+<svelte:head>
+	<title>{metadata.title} | Luís Otávio</title>
+	<meta name="description" content={metadata.description}>
+	<meta name="robots" content="index, follow">
+	<link rel="canonical" href="https://luisfadini.com/blog/${metadata.slug}" />
+</svelte:head>
+
 <div class="flex flex-col md:h-screen md:flex-row">
 	<Sidebar />
 

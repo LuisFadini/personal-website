@@ -3,6 +3,11 @@
 	import Sidebar from '$lib/components/sidebar/Sidebar.svelte';
 </script>
 
+<svelte:head>
+	<title>Sobre mim | Luís Otávio</title>
+	<link rel="canonical" href="https://luisfadini.com/sobre-mim" />
+</svelte:head>
+
 <div class="flex flex-col md:h-screen md:flex-row">
 	<Sidebar />
 
