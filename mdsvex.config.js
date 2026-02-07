@@ -17,7 +17,32 @@ import rehypeToc from '@jsdevtools/rehype-toc';
 
 const highlighter = await createHighlighter({
 	themes: ['dracula'],
-	langs: ['javascript', 'typescript', 'css', 'svelte', 'html', 'html', 'rust', 'json', "dockerfile", "yaml", "terraform"]
+	langs: [
+		'javascript',
+		'typescript',
+		'css',
+		'svelte',
+		'html',
+		'html',
+		'rust',
+		'json',
+		'dockerfile',
+		'yaml',
+		'terraform',
+		'bash',
+		'properties',
+		{
+			name: 'Ignore',
+			scopeName: 'source.ignore',
+			aliases: ['gitignore'],
+			patterns: [
+				{
+					match: '^#.*',
+					name: 'comment.line.number-sign.ignore'
+				}
+			]
+		}
+	]
 });
 
 function pushNode(node, filename, iconSelector) {
