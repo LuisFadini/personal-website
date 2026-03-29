@@ -13,6 +13,18 @@ export const load = ({ url }) => {
 			{
 				rel: 'icon',
 				href: favicon
+			},
+			{
+				rel: 'alternate',
+				type: 'application/rss+xml',
+				href: '/rss.xml',
+				title: 'Blog posts'
+			},
+			{
+				rel: 'alternate',
+				type: 'application/atom+xml',
+				href: '/atom.xml',
+				title: 'Blog posts'
 			}
 		],
 
