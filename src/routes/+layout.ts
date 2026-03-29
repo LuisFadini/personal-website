@@ -25,6 +25,12 @@ export const load = ({ url }) => {
 				type: 'application/atom+xml',
 				href: '/atom.xml',
 				title: 'Blog posts'
+			},
+			{
+				rel: 'alternate',
+				type: 'application/feed+json',
+				href: '/feed.json',
+				title: 'Blog posts'
 			}
 		],
 
