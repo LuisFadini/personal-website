@@ -27,11 +27,10 @@ export const load = ({ url }) => {
 			}
 		],
 
-
-    twitter: {
-      cardType: 'summary',
-      title: 'Luís Otávio',
-    },
+		twitter: {
+			cardType: 'summary',
+			title: 'Luís Otávio'
+		},
 
 		openGraph: {
 			type: 'website',

@@ -1,3 +1,4 @@
+import { BASE_URL } from '$lib';
 import { objectToXML } from '$lib/objectToXML';
 import { getPosts } from '$lib/posts';
 import type { RequestHandler } from '@sveltejs/kit';
@@ -8,8 +9,8 @@ export const GET: RequestHandler = async () => {
 	const items = posts.map((p) => ({
 		title: p.title,
 		description: p.description,
-		link: `https://luisfadini.com/blog/${p.slug}`,
-		guid: { children: `https://luisfadini.com/blog/${p.slug}`, isPermaLink: true },
+		link: `${BASE_URL}/blog/${p.slug}`,
+		guid: { children: `${BASE_URL}/blog/${p.slug}`, isPermaLink: true },
 		pubDate: new Date(p.updatedAt).toUTCString()
 	}));
 
@@ -21,10 +22,10 @@ export const GET: RequestHandler = async () => {
 
 	const channel = objectToXML({
 		title: 'Luís Otávio',
-		link: `https://luisfadini.com`,
+		link: BASE_URL,
 		description: 'Posts sobre tecnologia, programação e projetos pessoais.',
 		language: 'pt-BR',
-    ttl: 180,
+		ttl: 180,
 		lastBuildDate
 	});
 

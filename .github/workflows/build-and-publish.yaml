@@ -6,7 +6,7 @@ on:
       - main
     paths-ignore:
       - README.md
-      - "**/*.draft.*"
+      - '**/*.draft.*'
   workflow_dispatch:
 
 permissions:
@@ -79,7 +79,7 @@ jobs:
           tags: |
             ghcr.io/luisfadini/personal-website:latest
             ghcr.io/luisfadini/personal-website:${{ env.VERSION }}
-      
+
       - name: Update GitHub release documentation
         uses: softprops/action-gh-release@v2
         with:
