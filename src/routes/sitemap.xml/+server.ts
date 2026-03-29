@@ -1,3 +1,4 @@
+import { objectToXML } from '$lib/objectToXML';
 import { getPosts } from '$lib/posts';
 import type { RequestHandler } from '@sveltejs/kit';
 
@@ -15,12 +16,12 @@ export const GET: RequestHandler = async () => {
 			lastmod: '2025-11-15T18:55:00.000Z',
 			priority: '0.6'
 		},
-    ...posts.map(p => {return {loc: `https://luisfadini.com/blog/${p.slug}`, lastmod: p.updatedAt}})
+		...posts.map((p) => {
+			return { loc: `https://luisfadini.com/blog/${p.slug}`, lastmod: p.updatedAt };
+		})
 	];
 
-	const xmlEntries = [
-    ...entries.map(entry => `  <url>\n${Object.entries(entry).map(([key, val]) => `    <${key}>${val}</${key}>`).join("\n")}\n  </url>`)
-  ];
+	const xmlEntries = entries.map((entry) => `<url>\n${objectToXML(entry)}\n  </url>`);
 
 	const sitemap = `<?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
@@ -34,4 +35,4 @@ ${xmlEntries.join('\n')}
 	});
 };
 
-export const prerender = true
+export const prerender = true;
