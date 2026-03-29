@@ -7,6 +7,7 @@ export const load = ({ url }) => {
 	const baseTags = defineBaseMetaTags({
 		title: 'Luís Otávio',
 		titleTemplate: url.pathname === '/' ? '%s' : '%s | Luís Otávio',
+		description: 'Site pessoal com conteúdos sobre tecnologia, programação e alguns projetos.',
 		canonical: currentUrl,
 
 		additionalLinkTags: [

@@ -55,7 +55,7 @@
 					{pluralizedMinutes}
 				</li>
 			</ul>
-			<img src={metadata.imgSrc} alt="Post thumbnail" />
+			<enhanced:img src={metadata.imgSrc} alt="Post thumbnail" fetchpriority="high" />
 			<Component />
 		</article>
 	</main>
