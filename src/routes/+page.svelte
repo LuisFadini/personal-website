@@ -3,9 +3,20 @@
 	import type { PageProps } from './$types';
 	import Sidebar from '$lib/components/sidebar/Sidebar.svelte';
 	import ContentHeader from '$lib/components/ContentHeader.svelte';
+	import { JsonLd } from 'svelte-meta-tags';
+	import { BASE_URL } from '$lib';
 
 	const { data }: PageProps = $props();
 </script>
+
+<JsonLd
+	schema={{
+		'@type': 'Website',
+		name: 'Luís Otávio',
+		url: BASE_URL,
+		description: 'Site pessoal com conteúdos sobre tecnologia, programação e alguns projetos.'
+	}}
+/>
 
 <div class="flex flex-col md:h-screen md:flex-row">
 	<Sidebar />
