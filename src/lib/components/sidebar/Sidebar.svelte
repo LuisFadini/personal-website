@@ -1,6 +1,6 @@
 <script lang="ts">
 	import { resolve } from '$app/paths';
-	import photo from '$lib/assets/personal-photo.png';
+	import photo from '$lib/assets/personal-photo.png?enhanced';
 	import { navigationLinks } from '$lib/navigationLinks';
 	import { socials } from '$lib/socials';
 	import SocialIcon from './SocialIcon.svelte';
@@ -13,10 +13,11 @@
     md:border-r-2 md:border-b-0 lg:w-1/5"
 >
 	<div class="flex w-full flex-col items-center gap-3">
-		<img
+		<enhanced:img
 			src={photo}
 			alt="Profile"
 			class="w-40 rounded-full border border-zinc-700 shadow-xl ring-2 shadow-black/30 ring-zinc-800 md:w-48"
+			fetchpriority="high"
 		/>
 
 		<div class="w-full px-3 text-start">

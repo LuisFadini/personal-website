@@ -4,6 +4,8 @@
 	import Sidebar from '$lib/components/sidebar/Sidebar.svelte';
 	import ContentHeader from '$lib/components/ContentHeader.svelte';
 	import type { SvelteComponent } from 'svelte';
+	import { JsonLd } from 'svelte-meta-tags';
+	import { BASE_URL } from '$lib';
 
 	const { data }: PageProps = $props();
 	type C = $$Generic<typeof SvelteComponent>;
@@ -23,6 +25,29 @@
 
 	const Component = $derived(content);
 </script>
+
+<JsonLd
+	schema={{
+		'@type': 'BlogPosting',
+		mainEntityOfPage: {
+			'@type': 'WebPage',
+			'@id': `${BASE_URL}/blog/${metadata.slug}`
+		},
+		headline: metadata.title,
+		image: [`${BASE_URL}${metadata.imgSrc}`],
+		datePublished: metadata.createdAt,
+		dateModified: metadata.updatedAt,
+		author: {
+			'@type': 'Person',
+			name: 'Luís Otávio',
+			url: BASE_URL
+		},
+		publisher: {
+			'@type': 'Person',
+			name: 'Luís Otávio'
+		}
+	}}
+/>
 
 <div class="flex flex-col md:h-screen md:flex-row">
 	<Sidebar />
@@ -55,7 +80,7 @@
 					{pluralizedMinutes}
 				</li>
 			</ul>
-			<img src={metadata.imgSrc} alt="Post thumbnail" />
+			<enhanced:img src={metadata.imgSrc} alt="Post thumbnail" fetchpriority="high" />
 			<Component />
 		</article>
 	</main>

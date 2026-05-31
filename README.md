@@ -27,12 +27,12 @@ The site serves as my personal space on the internet for:
 - [x] Blog post layout and rendering
 - [x] Sitemap generation
 - [x] Deploy to a VPS
+- [x] RSS feed
 
 ### In Progress / Planned
 
 - [ ] Content localization
 - [ ] Comment system for blog posts
-- [ ] RSS feed
 - [ ] End-to-end testing
 - [ ] Storybook documentation
 

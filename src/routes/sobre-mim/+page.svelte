@@ -1,7 +1,19 @@
 <script>
+	import { BASE_URL } from '$lib';
 	import ContentHeader from '$lib/components/ContentHeader.svelte';
 	import Sidebar from '$lib/components/sidebar/Sidebar.svelte';
+	import { socials } from '$lib/socials';
+	import { JsonLd } from 'svelte-meta-tags';
 </script>
+
+<JsonLd
+	schema={{
+		'@type': 'Person',
+		name: 'Luís Otávio',
+		url: BASE_URL,
+		sameAs: socials.map((social) => social.href)
+	}}
+/>
 
 <div class="flex flex-col md:h-screen md:flex-row">
 	<Sidebar />

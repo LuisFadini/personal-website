@@ -1,13 +1,15 @@
 <script lang="ts">
 	import '../app.css';
-	import favicon from '$lib/assets/favicon.svg';
 	import 'iconify-icon';
+	import { page } from '$app/state';
+	import { MetaTags, deepMerge } from 'svelte-meta-tags';
+	import type { Snippet } from 'svelte';
 
-	let { children } = $props();
+	let { data, children }: { data: { baseMetaTags: unknown }; children: Snippet<[]> } = $props();
+
+	let metaTags = $derived(deepMerge(data.baseMetaTags, page.data.pageMetaTags));
 </script>
 
-<svelte:head>
-	<link rel="icon" href={favicon} />
-</svelte:head>
+<MetaTags {...metaTags} />
 
 {@render children()}
