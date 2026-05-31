@@ -31,7 +31,7 @@
 		'@type': 'BlogPosting',
 		mainEntityOfPage: {
 			'@type': 'WebPage',
-			'@id': `${BASE_URL}/${metadata.slug}`
+			'@id': `${BASE_URL}/blog/${metadata.slug}`
 		},
 		headline: metadata.title,
 		image: [`${BASE_URL}${metadata.imgSrc}`],
