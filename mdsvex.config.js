@@ -28,7 +28,20 @@ const highlighter = await createHighlighter({
 		'json',
 		'dockerfile',
 		'yaml',
-		'terraform'
+		'terraform',
+		'bash',
+		'properties',
+		{
+			name: 'Ignore',
+			scopeName: 'source.ignore',
+			aliases: ['gitignore'],
+			patterns: [
+				{
+					match: '^#.*',
+					name: 'comment.line.number-sign.ignore'
+				}
+			]
+		}
 	]
 });
 
