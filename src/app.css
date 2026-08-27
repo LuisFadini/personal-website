@@ -16,7 +16,8 @@
 }
 
 body {
-	@apply bg-zinc-900 font-inter text-white;
+	/* @apply bg-zinc-900 font-inter text-white; */
+	@apply font-inter
 }
 
 .inline-code :not(pre) :where(code):not(:where([class~='not-prose'], [class~='not-prose'] *)) {

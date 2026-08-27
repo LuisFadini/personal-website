@@ -1,8 +1,12 @@
 <script lang="ts">
-	const { text }: { text: string } = $props();
+	type Props = {
+		text: string
+	}
+
+	const { text }: Props = $props();
 </script>
 
-<header class="flex w-full flex-col items-center gap-2 border-zinc-600 md:border-b-2">
-	<h1 class="text-center text-3xl font-bold text-text md:p-3">{text}</h1>
-	<hr class="h-1 w-2/3 rounded-full border-0 bg-text md:hidden" />
+<header class="w-full flex flex-col items-center md:border-b-2 border-black py-2">
+	<h1 class="text-4xl md:text-2xl font-bold">{text}</h1>
+	<hr class="md:hidden h-2 bg-neutral-400 border-2 border-black w-2/3 rounded-full" />
 </header>

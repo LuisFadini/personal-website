@@ -24,9 +24,9 @@
 	<main
 		class="relative flex h-full w-full flex-col items-center md:min-h-0 md:w-2/3 md:overflow-auto lg:w-4/5"
 	>
-		<ContentHeader text="Blog articles" />
+		<ContentHeader text="Posts" />
 		<div
-			class="scrollbar flex min-h-0 w-full flex-col items-center gap-3 overflow-auto py-3 scrollbar-thumb-zinc-600 scrollbar-track-zinc-800"
+			class="scrollbar flex min-h-0 w-full px-5 flex-col items-center gap-3 overflow-auto py-3 scrollbar-thumb-zinc-600 scrollbar-track-zinc-800"
 		>
 			{#each data.posts as post (post.slug)}
 				<PostCard {...post} />

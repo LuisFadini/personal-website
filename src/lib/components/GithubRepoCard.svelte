@@ -1,5 +1,6 @@
 <script lang="ts">
 	import { onMount } from 'svelte';
+	import Icon from "@iconify/svelte"
 
 	let { githubRepoUrl }: { githubRepoUrl: string } = $props();
 
@@ -100,12 +101,12 @@
 
 			<div class="mt-1 flex items-center gap-4 text-sm text-zinc-400">
 				<div class="flex items-center gap-1">
-					<iconify-icon icon="ph:star-fill" height={14}></iconify-icon>
+					<Icon icon="ph:star-fill" height={14} />
 					<span class="leading-none">{repoData.stargazers_count}</span>
 				</div>
 
 				<div class="flex items-center gap-1">
-					<iconify-icon icon="ph:git-fork" height={14}></iconify-icon>
+					<Icon icon="ph:git-fork" height={14} />
 					<span class="leading-none">{repoData.forks_count}</span>
 				</div>
 			</div>

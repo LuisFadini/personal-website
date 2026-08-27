@@ -1,5 +1,6 @@
 <script lang="ts">
 	import type { SocialLink } from '$lib/socials';
+	import Icon from "@iconify/svelte"
 
 	const { icon, color, href: url, label }: SocialLink = $props();
 </script>
@@ -11,5 +12,5 @@
 	target="_blank"
 	aria-label={label}
 >
-	<iconify-icon width="100%" {icon}></iconify-icon>
+	<Icon width="100%" {icon} />
 </a>

@@ -6,6 +6,7 @@
 	import type { SvelteComponent } from 'svelte';
 	import { JsonLd } from 'svelte-meta-tags';
 	import { BASE_URL } from '$lib';
+	import Icon from "@iconify/svelte";
 
 	const { data }: PageProps = $props();
 	type C = $$Generic<typeof SvelteComponent>;
@@ -66,17 +67,17 @@
 		>
 			<ul class="not-prose mx-3 flex flex-col justify-between text-lg font-bold lg:flex-row">
 				<li class="flex flex-row items-center gap-2 lg:w-1/3">
-					<iconify-icon icon="ph:calendar-bold" width="24px"></iconify-icon>Criado: {dateToString(
+					<Icon icon="ph:calendar-bold" width="24px" />Criado: {dateToString(
 						metadata.createdAt
 					)}
 				</li>
 				<li class="flex flex-row items-center gap-2 lg:w-1/3">
-					<iconify-icon icon="ph:clock-clockwise-bold" width="24px"></iconify-icon>Atualizado: {dateToString(
+					<Icon icon="ph:clock-clockwise-bold" width="24px" />Atualizado: {dateToString(
 						metadata.updatedAt
 					)}
 				</li>
 				<li class="flex flex-row items-center gap-2 lg:w-1/3">
-					<iconify-icon icon="ph:book-open-text-bold" width="24px"></iconify-icon>Tempo de leitura: {metadata.readingTime}
+					<Icon icon="ph:book-open-text-bold" width="24px" />Tempo de leitura: {metadata.readingTime}
 					{pluralizedMinutes}
 				</li>
 			</ul>

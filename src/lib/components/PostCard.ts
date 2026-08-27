@@ -4,4 +4,5 @@ export type PostCardProps = {
 	shortDescription: string;
 	tags: string[];
 	imgSrc: string;
+	class?: string
 };

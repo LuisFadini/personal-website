@@ -4,6 +4,7 @@
 	import { navigationLinks } from '$lib/navigationLinks';
 	import { socials } from '$lib/socials';
 	import SocialIcon from './SocialIcon.svelte';
+	import Icon from "@iconify/svelte";
 </script>
 
 <aside
@@ -53,7 +54,7 @@
 					class="flex items-center gap-2 text-lg text-zinc-300 underline-offset-2
                transition hover:text-accent hover:underline"
 				>
-					<iconify-icon icon={link.icon} height="18px"></iconify-icon>
+					<Icon icon={link.icon} height="18px" />
 					{link.label}
 				</a>
 			</li>
