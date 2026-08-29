@@ -6,6 +6,6 @@
 	{#if children}
 		{@render children()}
 	{:else}
-		<p class="text-red-600">Insira conteudo aqui</p>
+		<p class="text-red-600">Insira conteúdo aqui</p>
 	{/if}
 </div>
