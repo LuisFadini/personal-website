@@ -2,6 +2,7 @@
 	import { asset, resolve } from '$app/paths';
 	import { twMerge } from 'tailwind-merge';
 	import type { PostCardProps } from '$lib/components/PostCard';
+	import Bordered from './Bordered.svelte';
 
 	const {
 		slug,
@@ -13,12 +14,14 @@
 	}: PostCardProps = $props();
 </script>
 
-<a
-	href={resolve(`/blog/${slug}`)}
+<Bordered
+	as="a"
+	href={resolve('/blog/[slug]', { slug })}
 	class={twMerge(
-		'flex w-full max-w-200 flex-col overflow-clip rounded-xl border-2 border-black shadow-[6px_6px_0px_0px_#000] transition-all hover:translate-1.5 hover:shadow-none',
+		'flex w-full max-w-200 flex-col overflow-clip rounded-xl transition-all hover:translate-1.5 hover:shadow-none',
 		className
 	)}
+	shadowSize={6}
 >
 	<img
 		src={asset(imgSrc)}
@@ -34,8 +37,11 @@
 				{postTitle}
 			</h3>
 
-			<hr
-				class="mx-auto h-1.5 w-[95%] rounded-full border border-black bg-blue-400 shadow-[2px_2px_0px_0px_#000] sm:h-2"
+			<Bordered
+				as="hr"
+				class="mx-auto h-1.5 w-[95%] rounded-full bg-blue-400 sm:h-2"
+				borderWidth={1}
+				shadowSize={2}
 			/>
 
 			<p class="text-sm leading-relaxed sm:text-base">
@@ -46,11 +52,16 @@
 		{#if tags.length > 0}
 			<div class="my-1 flex flex-row flex-wrap gap-2 sm:my-2">
 				{#each tags as tag (tag)}
-					<span class="rounded-full border border-black bg-blue-200 px-2 py-0.5 text-sm">
+					<Bordered
+						as="span"
+						class="rounded-full bg-blue-200 px-2 py-0.5 text-sm"
+						shadowSize={0}
+						borderWidth={1}
+					>
 						#{tag}
-					</span>
+					</Bordered>
 				{/each}
 			</div>
 		{/if}
 	</div>
-</a>
+</Bordered>
