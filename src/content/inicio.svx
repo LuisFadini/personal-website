@@ -30,7 +30,6 @@ Bom, esse é oficialmente o primeiro post do blog. Talvez não seja a melhor esc
 console.log('Olá mundo!');
 ```
 
----
 
 ## Escolha da techstack
 
@@ -48,7 +47,6 @@ E, claro, para escrever os artigos do blog, markdown foi a melhor escolha possí
 
 Para fazer o parse do markdown dentro do Svelte, usei o mdsvex, uma biblioteca que lembra bastante o MDX pela possibilidade de integrar componentes diretamente no markdown.
 
----
 
 ## Svelte
 
@@ -89,6 +87,7 @@ E assim está feito um contador funcional. Inclusive, aqui está ele:
       background-color: blue;
       padding: 4px;
       cursor: pointer;
+      color: black;
     }
   </style>
 </div>
@@ -97,7 +96,6 @@ Um detalhe que acho muito legal no Svelte é o escopo dos estilos. As regras den
 
 Também utilizei o SvelteKit, que funciona mais ou menos como o Next.js, possibilita rotas de API, otimizações de SEO, SSR enfim. Dá pra pensar no Svelte como sendo o React e no SvelteKit como o Next.js nesse ecossistema.
 
----
 
 ## Tailwind
 
@@ -107,7 +105,6 @@ Apesar disso, não considero que o site tenha ficado bonito, mas acabei nesse es
 
 Mesmo não sendo o Tailwind, faz parte do tema do site, que seria os icones, e bom os icones que utilizei foram do Iconify, pois ele reune aproximadamente 275k icones de diversos provedores diferentes, para os icones presentes nos textos e nos links sociais estou usando o icones do Phosphor e para icones de linguagens de programação estou usando o Material Icon Theme, o mesmo da extensão do VS Code.
 
----
 
 ## Markdown
 
@@ -120,7 +117,6 @@ Mas como você já deve ter percebido ao longo do post, eu queria inserir compon
 
 Assim sendo possível o Svelte renderizar tudo como se fosse qualquer outra página do site.
 
----
 
 ## Fazendo o deploy
 
@@ -201,7 +197,6 @@ Caso queira ver esses workflows em mais detalhes:
 - [Workflow de build](https://github.com/luisfadini/personal-website/blob/main/.github/workflows/build-and-publish.yaml)
 - [Workflow de update](https://github.com/luisfadini/personal-website/blob/main/.github/workflows/update-deployment.yaml)
 
----
 
 ## Conclusão
 

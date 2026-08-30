@@ -17,8 +17,6 @@ Agora que 2026 começou, achei que fazia sentido olhar pra trás e revisar como 
 
 Não foi um ano de grandes upgrades, mas serviu pra entender melhor como eu uso o ambiente no dia a dia, e isso acabou pesando bastante nos planos pra 2026.
 
----
-
 ## Software
 
 No começo de 2025 instalei algumas aplicações novas, entre elas o [Actual Budget](https://github.com/actualbudget/actual). A ideia é muito boa, ainda mais por ser open-source, mas na prática acabei usando pouco. Esse tipo de ferramenta só funciona quando você mantém uma rotina bem rígida de registrar tudo, e no meu caso isso acabou virando mais atrito do que benefício, ainda mais considerando que eu já tinha um controle bem grande dos meus gastos.
@@ -31,8 +29,6 @@ Mesmo quando o servidor está desligado, consigo acessar as senhas normalmente, 
 
 Um ponto que ficou pendente em 2025 foi a forma como faço updates nos containers Docker que rodam dentro de um LXC no Proxmox. Eu usava o [Watchtower](https://github.com/containrrr/watchtower/) pra automatizar isso, mas com o [projeto abandonado](https://github.com/containrrr/watchtower/discussions/2135), ficou claro que essa abordagem não é totalmente sustentável. Agora devo assumir o controle e fazer updates manuais, mesmo sendo mais trabalhoso, mas garante mais previsibilidade e estabilidade.
 
----
-
 ## Hardware
 
 Em termos de hardware, 2025 foi bem parado. O setup continuou basicamente o mesmo: apenas um servidor, roteador e a impressora 3D.
@@ -40,8 +36,6 @@ Em termos de hardware, 2025 foi bem parado. O setup continuou basicamente o mesm
 O único upgrade relevante foi no servidor, que passou de 12 GB pra 24 GB de RAM. Antes ele rodava com 4 + 8 GB e agora está com 16 + 8 GB. Não é o cenário ideal, já que módulos diferentes impedem XMP, mas foi o melhor custo-benefício no momento, já que esse módulo de 16GB retirei do meu desktop, e sendo sincero, é um servidor, não preciso de XMP, preciso de estabilidade.
 
 Apesar disso, chega a ser meio hipócrita falar em estabilidade quando esse servidor não tem backup adequado e ficou desligado por quase 3 meses. O TrueNAS roda com apenas um HD de 1 TB e o Proxmox com um único SSD de 512 GB. O mínimo ideal seria ter pelo menos redundância local, como um mirror em ZFS, algo que ficou claramente como dívida técnica.
-
----
 
 ## Mudanças para 2026
 

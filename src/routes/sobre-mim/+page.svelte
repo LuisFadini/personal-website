@@ -1,5 +1,6 @@
 <script>
 	import { BASE_URL } from '$lib';
+	import Article from '$lib/components/blog/Article.svelte';
 	import ContentHeader from '$lib/components/ContentHeader.svelte';
 	import Sidebar from '$lib/components/sidebar/Sidebar.svelte';
 	import { socials } from '$lib/socials';
@@ -22,15 +23,7 @@
 		class="flex h-full w-full flex-col items-center md:min-h-0 md:w-2/3 md:overflow-auto lg:w-4/5"
 	>
 		<ContentHeader text="Sobre mim" />
-		<div
-			class="inline-code headings-hide-autolink prose max-w-full px-6 py-4
-            prose-invert lg:w-2/3
-            prose-headings:scroll-m-4 prose-p:leading-relaxed
-            prose-ul:list-outside prose-ul:marker:text-accent
-            prose-li:text-[--tw-prose-invert-body]
-            prose-img:mx-auto prose-img:rounded-2xl
-            prose-hr:mx-5 prose-hr:my-7 prose-hr:h-0.5 prose-hr:rounded-full prose-hr:border-0 prose-hr:bg-text"
-		>
+		<Article>
 			<p>
 				Olá! Bem-vindo ao meu espaço na internet. Meu nome é Luís Otávio e atualmente estudo
 				Informática para a Internet no IFES-ST. Lá tive meu primeiro contato com lógica de
@@ -74,6 +67,6 @@
 				melhor projeto dos segundos anos. Ainda vou escrever sobre isso e liberar tudo como open
 				source no blog.
 			</p>
-		</div>
+		</Article>
 	</main>
 </div>

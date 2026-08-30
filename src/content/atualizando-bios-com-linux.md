@@ -14,8 +14,6 @@ createdAt: '2026-01-26T01:04:00.000Z'
 
 Como fiz para atualizar a BIOS do Acer Nitro V15 sem a necessidade de instalar o Windows, utilizando apenas Linux. Mas você pode se perguntar: vale um post no blog só pra isso? Bom, acredito que sim, por ser um notebook popular e por eu não ter encontrado essa solução em nenhum lugar anteriormente.
 
----
-
 ## Contexto
 
 Por que atualizar a BIOS? Bom, em algumas versões da BIOS do Acer Nitro V15, a memória reservada para hardware é de quase 2,5 GB, o que, para um notebook com 8 GB de RAM, é muita coisa. Nas versões mais recentes, a memória reservada para hardware é reduzida para aproximadamente 0,5 GB, o que para mim faria uma grande diferença, ainda mais considerando o preço atual das memórias.
@@ -32,16 +30,12 @@ Algumas soluções que passaram pela minha cabeça foram:
 
 E bom, não foi nenhuma dessas opções que eu usei.
 
----
-
 ## Hiren's Boot CD
 
 Em um post meio perdido no Reddit, no subreddit do Acer Nitro, um usuário comentou que também utilizava Linux e tinha conseguido atualizar a BIOS.  
 Perguntei como ele tinha feito, e a resposta foi simples: Hiren's Boot CD.
 
 Nunca tinha usado o Hiren’s Boot até então, mas basicamente ele é um Windows PE. Bom, o que é Windows PE? De forma bem resumida, é um Windows portátil, parecido com um LiveCD de Linux. Ele roda direto do pendrive, consegue executar praticamente qualquer `.exe` e não precisa ser instalado no disco. O Hiren’s Boot nada mais é do que um Windows PE com vários utilitários extras já inclusos.
-
----
 
 ## Como fazer?
 
@@ -55,8 +49,6 @@ Com o pendrive em mãos e a ISO baixada, crie um pendrive bootável. Se o PC que
 Mas, se quiser algo melhor, tanto para Windows quanto para Linux, use o [Ventoy](https://www.ventoy.net/en/index.html). Ele é perfeito. Uso em um pendrive de 32 GB cheio de ISOs de vários sistemas, entre eles: Mint, Ubuntu, Arch, Debian, Windows 10, Windows 11 e agora o Hiren's Boot.
 
 Com o pendrive pronto, basta inseri-lo no notebook (caso ainda não esteja), acessar a BIOS e ajustar a ordem de boot. Não tenho prints desse processo, mas uma busca rápida no Google resolve fácil. Depois disso, é só dar boot no Hiren’s Boot, abrir o navegador, acessar o site da Acer, baixar o updater da BIOS do notebook e executar o `.exe`. O notebook vai reiniciar, atualizar a BIOS e pronto.
-
----
 
 ## Meu GRUB sumiu
 

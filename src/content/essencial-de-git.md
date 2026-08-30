@@ -13,8 +13,6 @@ createdAt: '2026-02-07T19:05:00.000Z'
 Para começar, já aviso que este não é um artigo tão técnico sobre Git. Se quiser algo mais aprofundado, recomendo o vídeo do Fabio Akita, [Entendendo GIT | (não é um tutorial!)](https://youtu.be/6Czd1Yetaac).
 Este é um tutorial relativamente simples, mostrando as funções essenciais que qualquer desenvolvedor que use Git precisa saber, não importa o nível.
 
----
-
 ## O básico de como o Git funciona
 
 O Git trabalha basicamente com três áreas:
@@ -31,8 +29,6 @@ O fluxo normal é simples:
 
 Entendendo isso, o restante dos comandos fica muito mais simples.
 
----
-
 ## Instalação
 
 Para instalar o Git, utilize o instalador no site oficial, [git-scm.com](https://git-scm.com/), ou como eu prefiro fazer, usar um gerenciador de pacotes.
@@ -44,8 +40,6 @@ No macOS utilize o [homebrew](https://brew.sh): `brew install git`
 
 E no Linux, utilize o gerenciador de pacotes da sua distro favorita.
 No meu caso utilizo Arch Linux e um AUR helper chamado [`yay`](https://github.com/Jguer/yay), então instalo com `yay -S git`
-
----
 
 ## Comandos básicos
 
@@ -132,8 +126,6 @@ Mas caso for a primeira vez enviando uma branch nova você precisa adicionar mai
 
 É importante lembrar que enquanto você não rodar `git push`, seus commits existem apenas na sua máquina.
 
----
-
 ## Arquivos de configuração
 
 ### .gitignore
@@ -187,8 +179,6 @@ O `.gitattributes` também pode ser usado para definir arquivos binários como i
 ```
 
 Além disso o `.gitattributes` possui mais usos a depender da plataforma, por exemplo ignorar uma linguagem de programação de ser contada como parte do repositório ou coisas assim, nesses casos, consulte a documentação do [GitHub](https://docs.github.com/en/repositories/working-with-files/managing-files/customizing-how-changed-files-appear-on-github), [Gitlab](https://docs.gitlab.com/user/project/repository/files/git_attributes/) ou até do próprio [Git](https://git-scm.com/docs/gitattributes).
-
----
 
 ## Conclusão
 
