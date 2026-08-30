@@ -1,3 +1,29 @@
-# allow crawling everything by default
+# Block known AI crawlers
+
+User-agent: GPTBot
+Disallow: /
+
+User-agent: Google-Extended
+Disallow: /
+
+User-agent: ClaudeBot
+Disallow: /
+
+User-agent: anthropic-ai
+Disallow: /
+
+User-agent: PerplexityBot
+Disallow: /
+
+User-agent: CCBot
+Disallow: /
+
+User-agent: Bytespider
+Disallow: /
+
+# Allow all other crawlers
+
 User-agent: *
 Disallow:
+
+Sitemap: https://luisfadini.com/sitemap.xml
