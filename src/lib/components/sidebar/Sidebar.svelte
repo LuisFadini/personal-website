@@ -15,7 +15,12 @@
     md:border-r-2 md:border-b-0 lg:w-1/5"
 >
 	<div class="flex w-full flex-col items-center gap-3">
-		<Bordered as="enhanced:img" alt="Profile" src={photo} class="w-40 rounded-full md:w-48" fetchpriority="high" />
+		<enhanced:img
+			src={photo}
+			alt="Profile"
+			class="w-40 rounded-full border-2 border-black [box-shadow:4px_4px_0_0_#000] md:w-48"
+			fetchpriority="high"
+		/>
 
 		<div class="w-full px-3 text-start">
 			<h1 class="text-3xl font-bold tracking-tight text-black">Luís Otávio</h1>

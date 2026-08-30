@@ -59,20 +59,20 @@ function getFilenameIcon(filename) {
 	if (exactMap[lower]) {
 		return exactMap[lower];
 	}
-	
+
 	const patternMap = [
 		[/\.stories\.(js|jsx|ts|tsx|svelte)$/i, 'material-icon-theme:storybook'],
 		[/\.(test|spec)\.(js|jsx|ts|tsx)$/i, 'material-icon-theme:test-ts'],
 		[/\.config\.(js|ts)$/i, 'material-icon-theme:settings'],
 		[/\.d\.ts$/i, 'material-icon-theme:typescript-def']
 	];
-	
+
 	for (const [regex, icon] of patternMap) {
 		if (regex.test(lower)) {
 			return icon;
 		}
 	}
-	
+
 	const extension = lower.split('.').pop();
 	const iconMap = {
 		gitignore: 'material-icon-theme:git',
@@ -93,7 +93,7 @@ function getFilenameIcon(filename) {
 		yml: 'material-icon-theme:yaml',
 		yaml: 'material-icon-theme:yaml'
 	};
-	
+
 	return iconMap[extension] ?? 'material-icon-theme:document';
 }
 

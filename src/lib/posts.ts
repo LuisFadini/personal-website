@@ -32,7 +32,7 @@ export const getPosts = async () => {
 		} as PostFrontMatter);
 	}
 
-	posts.sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime())
+	posts.sort((a, b) => new Date(b.createdAt).getTime() - new Date(a.createdAt).getTime());
 	return posts;
 };
 

@@ -26,7 +26,7 @@
 	>
 		<ContentHeader text="Posts" />
 		<div
-			class="scrollbar flex min-h-0 w-full px-5 flex-col items-center gap-3 overflow-auto py-3 scrollbar-thumb-zinc-600 scrollbar-track-zinc-800"
+			class="scrollbar flex min-h-0 w-full flex-col items-center gap-3 overflow-auto px-5 py-3 scrollbar-thumb-zinc-600 scrollbar-track-zinc-800"
 		>
 			{#each data.posts as post (post.slug)}
 				<PostCard {...post} />

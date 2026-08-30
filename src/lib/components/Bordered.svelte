@@ -3,7 +3,7 @@
 	import { twMerge } from 'tailwind-merge';
 
 	type Props = {
-		as?: keyof HTMLElementTagNameMap | "enhanced:img";
+		as?: keyof HTMLElementTagNameMap;
 		children?: Snippet;
 
 		borderWidth?: number;
@@ -32,7 +32,6 @@
 		...rest
 	}: Props = $props();
 
-	
 	const classes = $derived(
 		twMerge(
 			'rounded-xl [border-width:var(--border-width)] [border-color:var(--border-color)] [box-shadow:var(--shadow-size)_var(--shadow-size)_0_0_var(--shadow-color)]',
@@ -49,19 +48,9 @@
 </script>
 
 {#if voidElements.has(as)}
-	<svelte:element
-		this={as}
-		{...rest}
-		class={classes}
-		style={style}
-	/>
+	<svelte:element this={as} {...rest} class={classes} {style} />
 {:else}
-	<svelte:element
-		this={as}
-		{...rest}
-		class={classes}
-		style={style}
-	>
+	<svelte:element this={as} {...rest} class={classes} {style}>
 		{@render children?.()}
 	</svelte:element>
 {/if}
